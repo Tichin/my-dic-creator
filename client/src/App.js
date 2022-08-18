@@ -18,7 +18,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Navigation />}>
         <Route index element={<Books />} />
-        <Route path=':bookTitle' element={<Book />}>
+        <Route path=':book_title' element={<Book />}>
           <Route index element={<Contents />} />{' '}
           <Route path=':chapter' element={<Chapter />}>
             <Route path='edit' element={<Edit />} />{' '}
