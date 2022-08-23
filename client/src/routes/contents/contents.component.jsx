@@ -25,15 +25,15 @@ export default function Contents() {
   const renderTitleChapterSubtitle = titleChapterSubtitleObjectList.map(
     (titleChapterSubtitleObject) => {
       const { chapter, subtitle, chapterBEAUTY } = titleChapterSubtitleObject;
-      const chapterEdit = `${chapter}/edit`;
-      const chapterSlides = `${chapter}/slides`;
+      const chapterEditPath = `${chapter}/edit`;
+      const chapterSlidespath = `${chapter}/slides`;
       return (
         <div key={chapter}>
           <div>
             <span>{chapterBEAUTY} </span>
             <span>{subtitle}</span>
-            <Link to={chapterEdit}>Edit</Link>{' '}
-            <Link to={chapterSlides}>Slides</Link>
+            <Link to={chapterEditPath}>Edit</Link>{' '}
+            <Link to={chapterSlidespath}>Slides</Link>
           </div>
         </div>
       );

@@ -1,0 +1,76 @@
+.slide-container {
+  margin: 0 auto;
+  line-height: 3.2;
+  font-size: 32px;
+  font-weight: bold;
+  position: relative;
+  height: 90vh;
+  width: 90%;
+  padding: 0 50px;
+
+  &::before {
+    content: '';
+    background-image: url('../../assets/henry-be-IicyiaPYGGI-unsplash.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+    // z-index: -1;
+  }
+  .sentence-container {
+    width: 100%;
+    height: 25%;
+
+    .active {
+      display: block;
+    }
+    .hidden {
+      display: none;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+    .indent {
+      text-indent: 16px;
+    }
+    .separator-span {
+      margin-right: 3px;
+    }
+  }
+
+  .definition-container {
+    width: 100%;
+    height: 55%;
+    margin: 0 auto;
+    margin-top: 150px;
+    line-height: 1.6;
+    font-size: 32px;
+    text-indent: 50px;
+
+    .capitalize {
+      text-transform: capitalize;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+  }
+
+  .button-container {
+    width: 200px;
+    margin: 0 auto;
+    button {
+      margin-left: 50px;
+    }
+  }
+
+  .right-lower-corner {
+    position: absolute;
+    right: 2px;
+    bottom: -70px;
+  }
+}
