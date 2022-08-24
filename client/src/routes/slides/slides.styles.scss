@@ -22,7 +22,7 @@
   }
   .sentence-container {
     width: 100%;
-    height: 25%;
+    height: 45%;
 
     .active {
       display: block;
@@ -44,13 +44,13 @@
 
   .definition-container {
     width: 100%;
-    height: 55%;
+    height: 60%;
     margin: 0 auto;
     margin-top: 150px;
     line-height: 1.6;
     font-size: 32px;
     text-indent: 50px;
-
+    background-color: aqua;
     .capitalize {
       text-transform: capitalize;
     }
@@ -62,7 +62,10 @@
 
   .button-container {
     width: 200px;
-    margin: 0 auto;
+    position: absolute;
+    bottom: -70px;
+    left: 45%;
+    right: 55%;
     button {
       margin-left: 50px;
     }
@@ -71,6 +74,12 @@
   .right-lower-corner {
     position: absolute;
     right: 2px;
+    bottom: -70px;
+  }
+
+  .left-lower-corner {
+    position: absolute;
+    left: 2px;
     bottom: -70px;
   }
 }

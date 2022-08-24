@@ -47,27 +47,38 @@ export default function Slides() {
     }
   };
 
-  const renderSingleSentence = sentenceObjectList.map(
+  const renderSentenceAndDefinition = sentenceObjectList.map(
     (sentenceObject, sentenceIndex) => {
       // sentenceObject: {'p1-s1':[{textDic},{textDic}...]}
       const sentenceObjectKey = Object.keys(sentenceObject)[0]; //'p1-s1'
       const sentenceObjectValues = Object.values(sentenceObject)[0]; // [{textDic},{textDic}...]
       return (
-        <SentenceComponent
-          key={sentenceObjectKey}
-          textDicArray={sentenceObjectValues}
-          sentenceMarker={sentenceObjectKey}
-          sentenceIndex={sentenceIndex}
-          pointerIndex={pointerIndex}
-        />
+        <div key={sentenceObjectKey}>
+          <div className='sentence-container'>
+            <SentenceComponent
+              textDicArray={sentenceObjectValues}
+              sentenceMarker={sentenceObjectKey}
+              sentenceIndex={sentenceIndex}
+              pointerIndex={pointerIndex}
+            />
+          </div>
+          <div className='definition-container'>
+            {' '}
+            <DefinitionComponent
+              textDicArray={sentenceObjectValues}
+              sentenceIndex={sentenceIndex}
+              pointerIndex={pointerIndex}
+            />
+          </div>
+        </div>
       );
     }
   );
 
   return (
     <div className='slide-container'>
-      <div className='sentence-container'>{renderSingleSentence}</div>
-      <div className='definition-container'>definitions</div>
+      <div>{renderSentenceAndDefinition}</div>
+
       <div className='button-container'>
         <button onClick={goToPre} onKeyDown={handleKeyDown}>
           pre
@@ -76,7 +87,10 @@ export default function Slides() {
           next
         </button>
       </div>
-      <Link to={`/${book_title}/${chapter}/edit`}>BACK TO EDIT</Link>
+      <div className='left-lower-corner'>
+        {' '}
+        <Link to={`/${book_title}/${chapter}/edit`}>BACK TO EDIT</Link>
+      </div>
     </div>
   );
 }
@@ -90,7 +104,11 @@ const SentenceComponent = (props) => {
     let className = hasDefinition ? 'pink' : '';
     className += isSeparator ? 'separator-span' : '';
 
-    return <span className={className}>{textDic.text}</span>;
+    return (
+      <span key={textDic.id} className={className}>
+        {textDic.text}
+      </span>
+    );
   });
 
   return (
@@ -102,6 +120,27 @@ const SentenceComponent = (props) => {
       <br />
       <br />
       <span className='right-lower-corner'>{sentenceMarker}</span>
+    </div>
+  );
+};
+
+const DefinitionComponent = (props) => {
+  let { textDicArray, sentenceIndex, pointerIndex } = props;
+
+  const renderDefinition = textDicArray.map((textDic) => {
+    const hasDefinition = textDic.definition ? true : false;
+
+    return hasDefinition ? (
+      <div key={textDic.id}>
+        <span className='capitalize underline'>{textDic.text}</span> :{' '}
+        {textDic.definition}
+      </div>
+    ) : null;
+  });
+
+  return (
+    <div className={sentenceIndex === pointerIndex ? 'active' : 'hidden'}>
+      {renderDefinition}
     </div>
   );
 };

@@ -33561,14 +33561,16 @@
       },
       "AnneOfGreenGables-chapter01-paragraph16-010-separator": {
         "text": ";\r ",
-        "end": false,
+        "end": true,
         "id": "AnneOfGreenGables-chapter01-paragraph16-010-separator",
         "bookTitle": "AnneOfGreenGables",
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
         "sentence": 2
-      },
+      }
+    },
+    "p16-s3": {
       "AnneOfGreenGables-chapter01-paragraph16-011-she": {
         "text": "she",
         "id": "AnneOfGreenGables-chapter01-paragraph16-011-she",
@@ -33579,7 +33581,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-011-separator": {
         "text": " ",
@@ -33589,7 +33591,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-012-had": {
         "text": "had",
@@ -33601,7 +33603,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-012-separator": {
         "text": " ",
@@ -33611,7 +33613,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-013-known": {
         "text": "known",
@@ -33623,7 +33625,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-013-separator": {
         "text": " ",
@@ -33633,7 +33635,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-014-that": {
         "text": "that",
@@ -33645,7 +33647,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-014-separator": {
         "text": " ",
@@ -33655,7 +33657,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-015-the": {
         "text": "the",
@@ -33667,7 +33669,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-015-separator": {
         "text": " ",
@@ -33677,7 +33679,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-016-sight": {
         "text": "sight",
@@ -33689,7 +33691,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-016-separator": {
         "text": " ",
@@ -33699,7 +33701,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-017-of": {
         "text": "of",
@@ -33711,7 +33713,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-017-separator": {
         "text": " ",
@@ -33721,7 +33723,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-018-Matthew": {
         "text": "Matthew",
@@ -33733,7 +33735,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-018-separator": {
         "text": " ",
@@ -33743,7 +33745,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-019-jaunting": {
         "text": "jaunting",
@@ -33755,7 +33757,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-019-separator": {
         "text": " ",
@@ -33765,7 +33767,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-020-off": {
         "text": "off",
@@ -33777,7 +33779,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-020-separator": {
         "text": " ",
@@ -33787,7 +33789,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-021-so": {
         "text": "so",
@@ -33799,7 +33801,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-021-separator": {
         "text": " ",
@@ -33809,7 +33811,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-022-unaccountably": {
         "text": "unaccountably",
@@ -33821,7 +33823,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-022-separator": {
         "text": " ",
@@ -33831,7 +33833,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-023-would": {
         "text": "would",
@@ -33843,7 +33845,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-023-separator": {
         "text": " ",
@@ -33853,7 +33855,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-024-be": {
         "text": "be",
@@ -33865,7 +33867,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-024-separator": {
         "text": "\r ",
@@ -33875,7 +33877,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-025-too": {
         "text": "too",
@@ -33887,7 +33889,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-025-separator": {
         "text": " ",
@@ -33897,7 +33899,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-026-much": {
         "text": "much",
@@ -33909,7 +33911,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-026-separator": {
         "text": " ",
@@ -33919,7 +33921,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-027-for": {
         "text": "for",
@@ -33931,7 +33933,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-027-separator": {
         "text": " ",
@@ -33941,7 +33943,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-028-her": {
         "text": "her",
@@ -33953,7 +33955,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-028-separator": {
         "text": " ",
@@ -33963,7 +33965,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-029-neighbor's": {
         "text": "neighbor's",
@@ -33975,7 +33977,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-029-separator": {
         "text": " ",
@@ -33985,7 +33987,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-030-curiosity": {
         "text": "curiosity",
@@ -33997,7 +33999,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "end": false,
-        "sentence": 2
+        "sentence": 3
       },
       "AnneOfGreenGables-chapter01-paragraph16-030-separator": {
         "text": ".",
@@ -34007,7 +34009,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph16",
         "isSeparator": true,
-        "sentence": 2
+        "sentence": 3
       }
     }
   },
@@ -61869,14 +61871,16 @@
       },
       "AnneOfGreenGables-chapter01-paragraph33-016-separator": {
         "text": ";\r ",
-        "end": false,
+        "end": true,
         "id": "AnneOfGreenGables-chapter01-paragraph33-016-separator",
         "bookTitle": "AnneOfGreenGables",
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
         "sentence": 1
-      },
+      }
+    },
+    "p33-s2": {
       "AnneOfGreenGables-chapter01-paragraph33-017-but": {
         "text": "but",
         "id": "AnneOfGreenGables-chapter01-paragraph33-017-but",
@@ -61887,7 +61891,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-017-separator": {
         "text": " ",
@@ -61897,7 +61901,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-018-if": {
         "text": "if",
@@ -61909,7 +61913,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-018-separator": {
         "text": " ",
@@ -61919,7 +61923,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-019-she": {
         "text": "she",
@@ -61931,7 +61935,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-019-separator": {
         "text": " ",
@@ -61941,7 +61945,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-020-could": {
         "text": "could",
@@ -61953,7 +61957,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-020-separator": {
         "text": " ",
@@ -61963,7 +61967,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-021-have": {
         "text": "have",
@@ -61975,7 +61979,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-021-separator": {
         "text": " ",
@@ -61985,7 +61989,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-022-seen": {
         "text": "seen",
@@ -61997,7 +62001,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-022-separator": {
         "text": " ",
@@ -62007,7 +62011,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-023-the": {
         "text": "the",
@@ -62019,7 +62023,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-023-separator": {
         "text": " ",
@@ -62029,7 +62033,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-024-child": {
         "text": "child",
@@ -62041,7 +62045,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-024-separator": {
         "text": " ",
@@ -62051,7 +62055,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-025-who": {
         "text": "who",
@@ -62063,7 +62067,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-025-separator": {
         "text": " ",
@@ -62073,7 +62077,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-026-was": {
         "text": "was",
@@ -62085,7 +62089,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-026-separator": {
         "text": " ",
@@ -62095,7 +62099,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-027-waiting": {
         "text": "waiting",
@@ -62107,7 +62111,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-027-separator": {
         "text": " ",
@@ -62117,7 +62121,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-028-patiently": {
         "text": "patiently",
@@ -62129,7 +62133,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-028-separator": {
         "text": " ",
@@ -62139,7 +62143,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-029-at": {
         "text": "at",
@@ -62151,7 +62155,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-029-separator": {
         "text": " ",
@@ -62161,7 +62165,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-030-the": {
         "text": "the",
@@ -62173,7 +62177,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-030-separator": {
         "text": " ",
@@ -62183,7 +62187,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-031-Bright": {
         "text": "Bright",
@@ -62195,7 +62199,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-031-separator": {
         "text": "\r ",
@@ -62205,7 +62209,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-032-River": {
         "text": "River",
@@ -62217,7 +62221,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-032-separator": {
         "text": " ",
@@ -62227,7 +62231,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-033-station": {
         "text": "station",
@@ -62239,7 +62243,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-033-separator": {
         "text": " ",
@@ -62249,7 +62253,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-034-at": {
         "text": "at",
@@ -62261,7 +62265,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-034-separator": {
         "text": " ",
@@ -62271,7 +62275,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-035-that": {
         "text": "that",
@@ -62283,7 +62287,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-035-separator": {
         "text": " ",
@@ -62293,7 +62297,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-036-very": {
         "text": "very",
@@ -62305,7 +62309,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-036-separator": {
         "text": " ",
@@ -62315,7 +62319,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-037-moment": {
         "text": "moment",
@@ -62327,7 +62331,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-037-separator": {
         "text": " ",
@@ -62337,7 +62341,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-038-her": {
         "text": "her",
@@ -62349,7 +62353,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-038-separator": {
         "text": " ",
@@ -62359,7 +62363,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-039-pity": {
         "text": "pity",
@@ -62371,7 +62375,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-039-separator": {
         "text": " ",
@@ -62381,7 +62385,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-040-would": {
         "text": "would",
@@ -62393,7 +62397,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-040-separator": {
         "text": " ",
@@ -62403,7 +62407,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-041-have": {
         "text": "have",
@@ -62415,7 +62419,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-041-separator": {
         "text": " ",
@@ -62425,7 +62429,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-042-been": {
         "text": "been",
@@ -62437,7 +62441,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-042-separator": {
         "text": " ",
@@ -62447,7 +62451,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-043-still": {
         "text": "still",
@@ -62459,7 +62463,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-043-separator": {
         "text": " ",
@@ -62469,7 +62473,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-044-deeper": {
         "text": "deeper",
@@ -62481,7 +62485,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-044-separator": {
         "text": " ",
@@ -62491,7 +62495,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-045-and": {
         "text": "and",
@@ -62503,7 +62507,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-045-separator": {
         "text": "\r ",
@@ -62513,7 +62517,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-046-more": {
         "text": "more",
@@ -62525,7 +62529,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-046-separator": {
         "text": " ",
@@ -62535,7 +62539,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-047-profound": {
         "text": "profound",
@@ -62547,7 +62551,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "end": false,
-        "sentence": 1
+        "sentence": 2
       },
       "AnneOfGreenGables-chapter01-paragraph33-047-separator": {
         "text": ".",
@@ -62557,7 +62561,7 @@
         "chapter": "chapter01",
         "paragraph": "paragraph33",
         "isSeparator": true,
-        "sentence": 1
+        "sentence": 2
       }
     }
   }
