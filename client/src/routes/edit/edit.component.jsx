@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext, Fragment } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { CartContext } from '../../contexts/cart.context';
+import CartIcon from '../../components/cart-icon/cart-icon.component';
 import './edit.styles.scss';
 
 export default function Edit() {
@@ -31,28 +33,29 @@ export default function Edit() {
   // paragraphObject: {'p1-s1':{sentenceDic},'p1-s2':{sentenceDic}...}
 
   const renderParagraph = paragraphObjectList.map((paragraphObject, index) => {
+    const pIndex = index + 1;
+    const paragraphMarker = `paragraph-${pIndex}`;
     return (
-      <div key={index}>
-        <Paragraph paragraphObject={paragraphObject} pIndex={index + 1} />
-        <br />
-        <br />
+      <div className='paragraph-container' key={index}>
+        <span className='sub'>{paragraphMarker}</span>
+        <p className='indent'>
+          <Paragraph paragraphObject={paragraphObject} pIndex={pIndex} />
+        </p>
       </div>
     );
   });
 
   return (
-    <div>
-      <div>
-        <div className='left-panel'>
-          {subtitle}
-          {renderParagraph}
-        </div>
-        <div className='right-panel'>edit dictionary</div>
+    <div className='page-container'>
+      <div className='chapter-container'>
+        <div className='subtitle-container'>{subtitle}</div>
+        <div>{renderParagraph}</div>
       </div>
       <Link to={chapterSlidesPath}>Show Slides</Link>
       <Link to='/'>Previous Chapter</Link>
       <Link to='/'>Next Chapter</Link>
       <a>update pages</a>
+      <CartIcon />
     </div>
   );
 }
@@ -60,24 +63,50 @@ export default function Edit() {
 const Paragraph = (props) => {
   // paragraphObject: {'p1-s1':{sentenceDic},'p1-s2':{sentenceDic}...}
   const { paragraphObject, pIndex } = props;
+  const { addItemToCart, cartItems } = useContext(CartContext);
+
+  const onTextDoubleClick = (textDic) => {
+    const { isSeparator } = textDic;
+
+    if (!isSeparator) {
+      addItemToCart({
+        ...textDic,
+      });
+    }
+  };
 
   const sentenceDicArray = Object.values(paragraphObject); //[{sentenceDic},{sentenceDic}]
-  const renderTextDic = sentenceDicArray.map((sentenceDic, index) => {
+  const renderParagraphTextDic = sentenceDicArray.map((sentenceDic, index) => {
     const sIndex = index + 1;
+
     return Object.values(sentenceDic).map((textDic, keyIndex) => {
-      const text = textDic.end ? (
-        <span key={keyIndex}>
-          {textDic.text}{' '}
-          <sub className='sub'>
-            p{pIndex}-s{sIndex}
-          </sub>
-        </span>
-      ) : (
-        <span key={keyIndex}>{textDic.text}</span>
+      const sentenceMarker = `p${pIndex}-s${sIndex}`;
+      const { id } = textDic;
+      let { definition } = textDic;
+
+      let className = '';
+
+      if (cartItems[id]) {
+        className += ' bg-lightpink';
+      }
+
+      if (definition) {
+        className += ' bg-lightblue';
+      }
+
+      return (
+        <Fragment key={keyIndex}>
+          <span
+            className={className}
+            onDoubleClick={() => onTextDoubleClick(textDic)}
+          >
+            {textDic.text}
+          </span>
+          {textDic.end && <sub className='sub'>{sentenceMarker} </sub>}
+        </Fragment>
       );
-      return text;
     });
   });
 
-  return <div>{renderTextDic}</div>;
+  return <Fragment>{renderParagraphTextDic}</Fragment>;
 };

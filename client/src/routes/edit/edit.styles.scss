@@ -1,4 +1,31 @@
-.sub {
-  font-size: 10px;
-  color: gray;
+.chapter-container {
+  width: 83%;
+  margin: 0 auto;
+  .subtitle-container {
+    margin-bottom: 30px;
+  }
+  .sub {
+    font-size: 10px;
+    color: gray;
+  }
+}
+
+.paragraph-container {
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.indent {
+  text-indent: 20px;
+  line-height: 40px;
+}
+.bg-lightpink {
+  background-color: lightpink;
+}
+
+.bg-lightblue {
+  background-color: lightblue;
 }
