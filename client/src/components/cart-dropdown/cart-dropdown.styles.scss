@@ -1,0 +1,32 @@
+.cart-dropdown-container {
+  // position: absolute;
+  // 再改位置 往右2022/8/25
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  width: 150px;
+  // height: 340px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid black;
+  background-color: white;
+  bottom: 200px;
+  left: 98%;
+  z-index: 5;
+
+  .empty-message {
+    font-size: 18px;
+    margin: 50px auto;
+  }
+
+  .cart-items {
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  button {
+    margin-top: auto;
+  }
+}
