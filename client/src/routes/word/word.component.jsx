@@ -1,12 +1,42 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useContext } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import Dictionary from '../../components/dictionary/dictionary.component';
+import WordSaveForm from '../../components/word-save-form/word-save-form.component';
+import { CartContext } from '../../contexts/cart.context';
+import { WordContext } from '../../contexts/word.context';
+import './word.styles.scss';
 
 export default function Word() {
   const navigate = useNavigate();
+  const { id } = useParams();
+  const { cartItems } = useContext(CartContext);
+  const { currentWord, setCurrentWord } = useContext(WordContext);
+
+  useEffect(() => {
+    const textDic = cartItems[id];
+    setCurrentWord({ ...textDic });
+  }, [cartItems, id]);
 
   return (
     <div>
-      word
+      <div className='word-container'>
+        {currentWord && (
+          <div>
+            {currentWord.text}
+            <div>{currentWord.partOfSpeech}</div>
+            <div>{currentWord.definition}</div>
+          </div>
+        )}
+      </div>
+
+      <div className='word-detail-container'>
+        <div className='dictionary-container'>
+          <Dictionary />
+        </div>
+        <div>
+          <WordSaveForm />
+        </div>
+      </div>
       <button onClick={() => navigate(-1)}>Go Back to Basket</button>
     </div>
   );

@@ -1,0 +1,13 @@
+.word-container {
+  display: flex;
+  border: 1px solid red;
+}
+
+.word-detail-container {
+  display: flex;
+  border: 1px solid green;
+  .dictionary-container {
+    width: 50%;
+    border: 1px solid yellow;
+  }
+}

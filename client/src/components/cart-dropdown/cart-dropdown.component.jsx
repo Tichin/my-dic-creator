@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../../contexts/cart.context';
 
 import './cart-dropdown.styles.scss';
@@ -17,15 +17,15 @@ const CartDropdown = () => {
     <div className='cart-dropdown-container'>
       <div className='cart-items'>
         {Object.values(cartItems).map((textDic) => {
-          const { text, paragraph, sentence } = textDic;
+          const { text, paragraph, sentence, id } = textDic;
           const lastIndex = paragraph.length - 1;
           const lastTwoIndex = paragraph.length - 2;
           const lastChar = paragraph[lastIndex];
           const lastTwoChar = paragraph[lastTwoIndex];
-          const p = lastTwoChar == 0 ? lastChar : lastTwoChar + lastChar;
+          const p = lastTwoChar === '0' ? lastChar : lastTwoChar + lastChar;
           const marker = `p${p}-s${sentence}`;
           return (
-            <div>
+            <div key={id}>
               {text}--{marker}
             </div>
           );
