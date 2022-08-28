@@ -43,15 +43,18 @@ export default function Flashcards() {
     }
   };
 
-  const doclist = textDicList.map((textDic, flashCardIndex) => (
-    <div className={pointerIndex === flashCardIndex ? 'active' : 'hidden'}>
+  const renderFlashCards = textDicList.map((textDic, flashCardIndex) => (
+    <div
+      key={textDic.id}
+      className={pointerIndex === flashCardIndex ? 'active' : 'hidden'}
+    >
       {' '}
       <FlashCard key={textDic.id} textDic={textDic} />
     </div>
   ));
   return (
     <div>
-      {doclist}
+      <div>{renderFlashCards}</div>
       <div className='button-container'>
         <button onClick={goToPre} onKeyDown={handleKeyDown}>
           pre

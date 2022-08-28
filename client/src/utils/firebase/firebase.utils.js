@@ -65,11 +65,11 @@ export const createNewDoc = async (collectionKey, docRef, objectToAdd) => {
 export const getWordDocuments = async (collectionKey) => {
   const querySnapshot = await getDocs(collection(db, collectionKey));
 
-  querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
+  // querySnapshot.forEach((doc) => {
+  //   // doc.data() is never undefined for query doc snapshots
 
-    console.log(doc.id, ' => ', doc.data());
-  });
+  //   console.log(doc.id, ' => ', doc.data());
+  // });
 
   const docs = querySnapshot.docs.map((doc) => doc.data());
   return docs;
