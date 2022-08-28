@@ -10,12 +10,12 @@ export default function Flashcards() {
   const [pointerIndex, setPointerIndex] = useState(0);
 
   useEffect(() => {
-    const doclist = async () => {
-      const docs = await getWordDocuments('AnneOfGreenGables-ch01-p01');
-      setTextDicList(docs);
+    const getTextDicList = async () => {
+      const textDicList = await getWordDocuments('AnneOfGreenGables-ch01-p01');
+      setTextDicList(textDicList);
     };
 
-    doclist();
+    getTextDicList();
   }, []);
 
   const goToPre = () => {
