@@ -9,7 +9,8 @@ const router = express.Router();
 //     require(`../../data/AnneOfGreenGables/sentences/${filename}`)
 //   );
 
-const chapterObject = require('../../data/AnneOfGreenGables/AnneOfGreenGables-chapter01.json');
+// const chapterObject = require('../../data/AnneOfGreenGables/AnneOfGreenGables-chapter01.json');
+const chapterObject = require('../../data/AnneOfGreenGables/AnneOfGreenGables-test.json');
 const chapterObjectList = [chapterObject];
 
 // @route    GET api/AnneOfGreenGables/
@@ -62,7 +63,7 @@ router.get('/:chapter/slides', (req, res) => {
   // paragraphObject: {'p1-s1':{sentenceDic},'p1-s2':{sentenceDic}...}
   // Object.values(paragraphObject): {sentenceDic}
 
-  // [{'p1-s1':[{dic},{dic}]]
+  // [{'p1-s1':[{dic},{dic}]...]
   let sentenceObjectList = [];
 
   for (let paragraphObject of paragraphObjectList) {
@@ -107,5 +108,46 @@ const getParagraphObjectListAndSubtitle = (chapter, chapterObjectList) => {
 
   return [paragraphObjectList, subtitle];
 };
+
+// @route    POST api/AnneOfGreenGables/:chapter
+// @desc     post
+// @access   Private
+
+router.post('/:chapter', (req, res) => {
+  const textDicObject = req.body.textDics;
+  const chapter = req.body.chapter;
+  // cartItems/textDics { id:{textDic}, id:{textDic}...}
+
+  console.log(req.body.textDics);
+
+  const chapterObject = chapterObjectList.find(
+    (chapterObject) => chapterObject['chapter'] === chapter
+  );
+  Object.values(textDicObject).forEach((textDic) => {
+    const { paragraph, sentence, id } = textDic;
+    const pNumber = Number(paragraph.slice(-2));
+    const sentenceMarker = `p${pNumber}-s${sentence}`;
+    const oldTextDic = chapterObject[paragraph][sentenceMarker][id];
+    chapterObject[paragraph][sentenceMarker][id] = {
+      ...oldTextDic,
+      ...textDic,
+    };
+  });
+
+  //`/Users/didiwu/Desktop/my-dic-creator/data/AnneOfGreenGables/AnneOfGreenGables-${chapter}.json`
+  fs.writeFile(
+    `/Users/didiwu/Desktop/my-dic-creator/data/AnneOfGreenGables/AnneOfGreenGables-test.json`,
+    JSON.stringify(chapterObject),
+    (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('done');
+      }
+    }
+  );
+
+  res.send('Done!');
+});
 
 module.exports = router;

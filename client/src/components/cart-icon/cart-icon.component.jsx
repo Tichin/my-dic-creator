@@ -7,7 +7,7 @@ const CartIcon = () => {
   const { isCartOpen, setIsCartOpen, cartCount, clearItemFromCart } =
     useContext(CartContext);
   const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen);
-  const onBtnClick = () => {
+  const onClearClick = () => {
     clearItemFromCart();
   };
 
@@ -22,7 +22,7 @@ const CartIcon = () => {
         <ShoppingIcon className='shopping-icon' onClick={toggleIsCartOpen} />
         <span className='item-count'>{cartCount}</span>
       </Fragment>
-      <button onClick={onBtnClick}>clear the cart</button>
+      <button onClick={onClearClick}>clear the cart</button>
     </div>
   );
 };

@@ -22,35 +22,32 @@
   }
   .sentence-container {
     width: 100%;
-    height: 45%;
-
-    .active {
-      display: block;
-    }
-    .hidden {
-      display: none;
-    }
-
-    .pink {
-      background-color: pink;
-    }
-    .indent {
-      text-indent: 16px;
-    }
-    .separator-span {
-      margin-right: 3px;
+    height: 60%;
+    padding-top: 50px;
+    .slide-text {
+      font-size: 40px;
+      line-height: 2.5;
+      .pink {
+        background-color: pink;
+      }
+      .indent {
+        text-indent: 16px;
+      }
+      .separator-span {
+        margin-right: 3px;
+      }
     }
   }
 
   .definition-container {
     width: 100%;
-    height: 60%;
+    height: 35%;
     margin: 0 auto;
-    margin-top: 150px;
-    line-height: 1.6;
+    margin-top: 100px;
+    line-height: 2;
     font-size: 32px;
     text-indent: 50px;
-    background-color: aqua;
+
     .capitalize {
       text-transform: capitalize;
     }
@@ -82,4 +79,11 @@
     left: 2px;
     bottom: -70px;
   }
+}
+
+.active {
+  display: block;
+}
+.hidden {
+  display: none;
 }

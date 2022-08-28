@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import './slides.styles.scss';
@@ -53,22 +53,19 @@ export default function Slides() {
       const sentenceObjectKey = Object.keys(sentenceObject)[0]; //'p1-s1'
       const sentenceObjectValues = Object.values(sentenceObject)[0]; // [{textDic},{textDic}...]
       return (
-        <div key={sentenceObjectKey}>
+        <div
+          key={sentenceObjectKey}
+          className={pointerIndex === sentenceIndex ? 'active' : 'hidden'}
+          tabIndex={0}
+        >
           <div className='sentence-container'>
             <SentenceComponent
               textDicArray={sentenceObjectValues}
               sentenceMarker={sentenceObjectKey}
-              sentenceIndex={sentenceIndex}
-              pointerIndex={pointerIndex}
             />
           </div>
           <div className='definition-container'>
-            {' '}
-            <DefinitionComponent
-              textDicArray={sentenceObjectValues}
-              sentenceIndex={sentenceIndex}
-              pointerIndex={pointerIndex}
-            />
+            <DefinitionComponent textDicArray={sentenceObjectValues} />
           </div>
         </div>
       );
@@ -96,7 +93,7 @@ export default function Slides() {
 }
 
 const SentenceComponent = (props) => {
-  let { textDicArray, sentenceIndex, pointerIndex, sentenceMarker } = props;
+  let { textDicArray, sentenceMarker } = props;
 
   const renderSentence = textDicArray.map((textDic) => {
     const hasDefinition = textDic.definition ? true : false;
@@ -112,20 +109,15 @@ const SentenceComponent = (props) => {
   });
 
   return (
-    <div
-      className={pointerIndex === sentenceIndex ? 'active' : 'hidden'}
-      tabIndex={0}
-    >
-      <p className='indent'>{renderSentence}</p>
-      <br />
-      <br />
+    <div>
+      <p className='indent slide-text'>{renderSentence}</p>
       <span className='right-lower-corner'>{sentenceMarker}</span>
     </div>
   );
 };
 
 const DefinitionComponent = (props) => {
-  let { textDicArray, sentenceIndex, pointerIndex } = props;
+  let { textDicArray } = props;
 
   const renderDefinition = textDicArray.map((textDic) => {
     const hasDefinition = textDic.definition ? true : false;
@@ -138,9 +130,5 @@ const DefinitionComponent = (props) => {
     ) : null;
   });
 
-  return (
-    <div className={sentenceIndex === pointerIndex ? 'active' : 'hidden'}>
-      {renderDefinition}
-    </div>
-  );
+  return <div>{renderDefinition}</div>;
 };

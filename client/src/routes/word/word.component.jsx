@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import Sentence from '../../components/sentence/sentence.component';
 import Dictionary from '../../components/dictionary/dictionary.component';
 import WordSaveForm from '../../components/word-save-form/word-save-form.component';
 import { CartContext } from '../../contexts/cart.context';
@@ -22,13 +23,10 @@ export default function Word() {
       <div className='word-container'>
         {currentWord && (
           <div>
-            {currentWord.text}
-            <div>{currentWord.partOfSpeech}</div>
-            <div>{currentWord.definition}</div>
+            <Sentence />
           </div>
         )}
       </div>
-
       <div className='word-detail-container'>
         <div className='dictionary-container'>
           <Dictionary />

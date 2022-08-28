@@ -8,13 +8,16 @@ import './text.styles.scss';
 
 export default function Text() {
   const { book_title, chapter } = useParams();
-  const { addItemToCart, cartItems, isCartOpen } = useContext(CartContext);
+  const { addItemToCart, cartItems, isCartOpen, cartCount } =
+    useContext(CartContext);
   const [paragraphObjectList, setParagraphObjectList] = useState([]);
   const [subtitle, setSubtitle] = useState('');
-  const chapterSlidesPath = `/${book_title}/${chapter}/slides`;
+  const PATHTOSLIDES = `/${book_title}/${chapter}/slides`;
+  const PATHTOFLASHCARD = `/${book_title}/${chapter}/flashcards`;
   const UNDERSCORE = '_';
   const NOSPACE = '';
   const bookTitle = book_title.split(UNDERSCORE).join(NOSPACE);
+  const Zero = cartCount === 0 ? true : false;
   // function to chapter++
   // re-render only after chapter changed or ask for re-fresh
   // to avoid to many rerenders
@@ -30,6 +33,8 @@ export default function Text() {
         console.log(error);
       });
   }, [bookTitle, chapter]);
+
+  useEffect(() => {}, [Zero]);
 
   // paragraphObjectList: [{'p1-s1':{sentenceDic},'p1-s2':{sentenceDic}...},{'p2-s1':{sentence},'p2-s2':{sentenceDic}...}]
   // paragraphObject: {'p1-s1':{sentenceDic},'p1-s2':{sentenceDic}...}
@@ -54,11 +59,12 @@ export default function Text() {
 
   return (
     <div className='page-container'>
+      <Link to={PATHTOSLIDES}>Show Slides</Link>
+      <Link to={PATHTOFLASHCARD}>Show Flashcards</Link>
       <div className='chapter-container'>
         <div className='subtitle-container'>{subtitle}</div>
         <div>{renderParagraph}</div>
       </div>
-      <Link to={chapterSlidesPath}>Show Slides</Link>
       <Link to='/'>Previous Chapter</Link>
       <Link to='/'>Next Chapter</Link>
       <a>update pages</a>
@@ -71,6 +77,7 @@ export default function Text() {
 const Paragraph = (props) => {
   // paragraphObject: {'p1-s1':{sentenceDic},'p1-s2':{sentenceDic}...}
   const { paragraphObject, pIndex, addItemToCart, cartItems } = props;
+  const [hover, setHover] = useState(false);
 
   const onTextClick = (textDic) => {
     const { isSeparator } = textDic;
@@ -80,6 +87,10 @@ const Paragraph = (props) => {
         ...textDic,
       });
     }
+  };
+
+  const onWordMouseOver = () => {
+    setHover(true);
   };
 
   const sentenceDicArray = Object.values(paragraphObject); //[{sentenceDic},{sentenceDic}]
@@ -98,13 +109,21 @@ const Paragraph = (props) => {
       }
 
       if (definition) {
+        console.log(textDic.text);
         className += ' bg-lightblue';
       }
 
       return (
         <Fragment key={keyIndex}>
-          <span className={className} onClick={() => onTextClick(textDic)}>
+          <span
+            className={`${className}  tooltip`}
+            onClick={() => onTextClick(textDic)}
+            onMouseOver={() => onWordMouseOver()}
+          >
             {textDic.text}
+            {hover && definition && (
+              <span className='tooltiptext'>{definition}</span>
+            )}
           </span>
           {textDic.end && <sub className='sub'>{sentenceMarker} </sub>}
         </Fragment>
