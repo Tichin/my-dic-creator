@@ -36,7 +36,9 @@ export default function Words() {
     navigate(PATHTOEDIT);
   };
   const renderWords = Object.values(cartItems).map((textDic) => {
-    return <CartItem key={textDic.id} cartItem={textDic} />;
+    return textDic.bookTitle === bookTitle ? (
+      <CartItem key={textDic.id} cartItem={textDic} />
+    ) : null;
   });
   return (
     <div>

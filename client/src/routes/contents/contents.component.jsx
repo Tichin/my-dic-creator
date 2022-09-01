@@ -13,8 +13,9 @@ export default function Contents() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5001/api/${bookTitle}/`)
+      .get(`http://localhost:5001/api/${bookTitle}`)
       .then((response) => {
+        console.log(response.data);
         setTitleChapterSubtitleObjectList(response.data);
       })
       .catch((error) => {

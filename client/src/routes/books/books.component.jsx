@@ -25,6 +25,13 @@ export default function Books() {
       bookTitleToDisplay: 'Klara and The Sun',
       imageUrl: 'https://i.ibb.co/J382zRT/Klara-And-The-Sun.png',
     },
+    {
+      id: 4,
+      bookTitle: 'Sapiens',
+      book_title: 'Sapiens',
+      bookTitleToDisplay: 'Sapiens',
+      imageUrl: 'https://i.ibb.co/W5nwx6m/sapiens.png',
+    },
   ];
 
   const renderBookSnippets = books.map((book) => {

@@ -9,8 +9,7 @@ const router = express.Router();
 //     require(`../../data/AnneOfGreenGables/sentences/${filename}`)
 //   );
 
-// const chapterObject = require('../../data/AnneOfGreenGables/AnneOfGreenGables-chapter01.json');
-const chapterObject = require('../../data/AnneOfGreenGables/AnneOfGreenGables-test.json');
+const chapterObject = require('../../data/AnneOfGreenGables/AnneOfGreenGables-chapter01.json');
 const chapterObjectList = [chapterObject];
 
 // @route    GET api/AnneOfGreenGables/
@@ -136,7 +135,7 @@ router.post('/:chapter', (req, res) => {
 
   //`/Users/didiwu/Desktop/my-dic-creator/data/AnneOfGreenGables/AnneOfGreenGables-${chapter}.json`
   fs.writeFile(
-    `/Users/didiwu/Desktop/my-dic-creator/data/AnneOfGreenGables/AnneOfGreenGables-test.json`,
+    `/Users/didiwu/Desktop/my-dic-creator/data/AnneOfGreenGables/AnneOfGreenGables.json`,
     JSON.stringify(chapterObject),
     (err) => {
       if (err) {

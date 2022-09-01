@@ -109,7 +109,6 @@ const Paragraph = (props) => {
       }
 
       if (definition) {
-        console.log(textDic.text);
         className += ' bg-lightblue';
       }
 
