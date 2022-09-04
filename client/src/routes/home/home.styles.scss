@@ -1,0 +1,66 @@
+.home-container {
+  margin: 10px 100px;
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .logo-container {
+      .lemon-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 40px;
+      }
+
+      .title.rainbow-letters {
+        font-size: 32px;
+        padding: 5px;
+        font-family: 'Rubik Moonrocks', cursive;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .rainbow-letters span:nth-child(10n + 1) {
+        color: pink;
+      }
+
+      .rainbow-letters span:nth-child(10n + 2) {
+        color: #ab47bc;
+      }
+
+      .rainbow-letters span:nth-child(10n + 3) {
+        color: #651fff;
+      }
+
+      .rainbow-letters span:nth-child(10n + 4) {
+        color: #2196f3;
+      }
+
+      .rainbow-letters span:nth-child(10n + 5) {
+        color: rgb(224, 200, 16);
+      }
+
+      .rainbow-letters span:nth-child(10n + 6) {
+        color: #00bcd4;
+      }
+
+      .rainbow-letters span:nth-child(10n + 7) {
+        color: #4caf50;
+      }
+
+      .rainbow-letters span:nth-child(10n + 8) {
+        color: powderblue;
+      }
+      .rainbow-letters span:nth-child(10n + 9) {
+        color: pink;
+      }
+      .rainbow-letters span:nth-child(10n) {
+        color: #00bcd4;
+      }
+    }
+  }
+
+  .outlet {
+    width: 100vw;
+    height: 80vh;
+  }
+}
