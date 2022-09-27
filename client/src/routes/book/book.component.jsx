@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useParams, Outlet } from 'react-router-dom';
+import { useParams, Outlet } from 'react-router-dom';
 import './book.styles.scss';
 
 export default function Book() {
@@ -9,7 +9,6 @@ export default function Book() {
   const bookTitleToDisplay = book_title.split(UNDERSCORE).join(SPACE);
   return (
     <div>
-      <Link to='/'>back to home</Link>
       <div>{bookTitleToDisplay}</div>
       <Outlet />
     </div>

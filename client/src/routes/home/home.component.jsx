@@ -9,7 +9,7 @@ export default function Home() {
     const { id, book_title, bookTitleToDisplay } = book;
     const pathToBook = `${book_title}`;
     return (
-      <div id={id}>
+      <div className='book-link' id={id}>
         <Link to={pathToBook}>{bookTitleToDisplay}</Link>
       </div>
     );
@@ -27,29 +27,23 @@ export default function Home() {
       <nav className='nav-container'>
         <Link to='/' className='logo-container'>
           <LemonIcon className='lemon-icon' />
-          <span className='title rainbow-letters'>
-            <span>L</span>
-            <span>e</span>
-            <span>m</span>
-            <span>o</span>
-            <span>n</span>
-            <span>B</span>
-            <span>o</span>
-            <span>o</span>
-            <span>k</span>
-            <span>C</span>
-            <span>l</span>
-            <span>u</span>
-            <span>b</span>
-          </span>
+          <span className='title rainbow-letters'>Lemon Book Club</span>
         </Link>
-        <div className='nav-links-container'>nav links..........</div>
+        <div className='nav-links-container'>
+          <Link to='/' className='nav-link'>
+            Home
+          </Link>
+          <div className='nav-link'>Books</div>
+          <div className='nav-link'>Sign In</div>
+        </div>
       </nav>
       <div className='outlet'>
         <Outlet />
       </div>
 
-      <footer className='footer-container'>{renderOtherBooks}</footer>
+      <footer className='footer-container'>
+        <div className='book-links'>{renderOtherBooks}</div>
+      </footer>
     </div>
   );
 }
