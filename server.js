@@ -27,6 +27,6 @@ app.get("/", (req, res) => res.send("API running"));
 app.use("/api/AnneOfGreenGables", require("./routes/api/AnneOfGreenGables"));
 app.use("/api/Sapiens", require("./routes/api/Sapiens"));
 
-const PORT = process.env.PORT || 5002;
+const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

@@ -1,0 +1,17 @@
+.list {
+  column-width: 400px;
+  column-fill: auto;
+  column-gap: 0;
+  height: 100vh;
+}
+.item {
+  padding-top: 10px;
+}
+
+.item:nth-child(20n) {
+  margin-bottom: 100vh; /* to create the break */
+}
+
+body {
+  margin: 0;
+}

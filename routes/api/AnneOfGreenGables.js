@@ -1,5 +1,5 @@
-const express = require('express');
-const fs = require('fs');
+const express = require("express");
+const fs = require("fs");
 const router = express.Router();
 
 // the complete book chapters
@@ -8,30 +8,21 @@ const router = express.Router();
 //   .map((filename) =>
 //     require(`../../data/AnneOfGreenGables/sentences/${filename}`)
 //   );
-
-const chapterObject = require('../../data/AnneOfGreenGables/AnneOfGreenGables-chapter01.json');
+const contents = require("../../data/AnneOfGreenGables/contents");
+const chapterObject = require("../../data/AnneOfGreenGables/AnneOfGreenGables-chapter01.json");
 const chapterObjectList = [chapterObject];
 
 // @route    GET api/AnneOfGreenGables/
-// @desc     get book title, chapter(number), and subtitle
+// @desc     get id, chapterTitle, chapterNumber, romanNumerals,
 // @access   Private
-router.get('/', (req, res) => {
-  const titleChapterSubtitleObjectList = chapterObjectList.map(
-    (chapterObject) => ({
-      chapter: chapterObject['chapter'],
-      subtitle: chapterObject['subtitle'],
-      bookTitle: chapterObject['bookTitle'],
-      chapterBEAUTY: chapterObject['chapterBEAUTY'],
-    })
-  );
-
-  res.send(titleChapterSubtitleObjectList);
+router.get("/", (req, res) => {
+  res.send(contents);
 });
 
 // @route    GET api/AnneOfGreenGables/:chapter/edit
 // @desc     get
 // @access   Private
-router.get('/:chapter/edit', (req, res) => {
+router.get("/:chapter/edit", (req, res) => {
   const { chapter } = req.params;
 
   const [paragraphObjectList, subtitle] = getParagraphObjectListAndSubtitle(
@@ -50,7 +41,7 @@ router.get('/:chapter/edit', (req, res) => {
 // @desc     get
 // @access   Private
 
-router.get('/:chapter/slides', (req, res) => {
+router.get("/:chapter/slides", (req, res) => {
   const { chapter } = req.params;
 
   const [paragraphObjectList, subtitle] = getParagraphObjectListAndSubtitle(
@@ -83,19 +74,19 @@ router.get('/:chapter/slides', (req, res) => {
 
 const getParagraphObjectListAndSubtitle = (chapter, chapterObjectList) => {
   const chapterObject = chapterObjectList.find(
-    (chapterObject) => chapterObject['chapter'] === chapter
+    (chapterObject) => chapterObject["chapter"] === chapter
   );
 
-  const subtitle = chapterObject['subtitle'];
+  const subtitle = chapterObject["subtitle"];
 
   const paragraphIdList = (() => {
     // get ['paragraph01', 'paragraph02'...]
     return Object.keys(chapterObject).filter(
       (key) =>
-        key !== 'bookTitle' &&
-        key !== 'chapter' &&
-        key !== 'chapterBEAUTY' &&
-        key !== 'subtitle'
+        key !== "bookTitle" &&
+        key !== "chapter" &&
+        key !== "chapterBEAUTY" &&
+        key !== "subtitle"
     );
   })();
 
@@ -112,7 +103,7 @@ const getParagraphObjectListAndSubtitle = (chapter, chapterObjectList) => {
 // @desc     post
 // @access   Private
 
-router.post('/:chapter', (req, res) => {
+router.post("/:chapter", (req, res) => {
   const textDicObject = req.body.textDics;
   const chapter = req.body.chapter;
   // cartItems/textDics { id:{textDic}, id:{textDic}...}
@@ -120,7 +111,7 @@ router.post('/:chapter', (req, res) => {
   console.log(req.body.textDics);
 
   const chapterObject = chapterObjectList.find(
-    (chapterObject) => chapterObject['chapter'] === chapter
+    (chapterObject) => chapterObject["chapter"] === chapter
   );
   Object.values(textDicObject).forEach((textDic) => {
     const { paragraph, sentence, id } = textDic;
@@ -141,12 +132,12 @@ router.post('/:chapter', (req, res) => {
       if (err) {
         console.log(err);
       } else {
-        console.log('done');
+        console.log("done");
       }
     }
   );
 
-  res.send('Done!');
+  res.send("Done!");
 });
 
 module.exports = router;
