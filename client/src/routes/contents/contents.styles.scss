@@ -3,7 +3,11 @@
   column-fill: auto;
   column-gap: 0;
   height: 100vh;
+  a:visited {
+    color: blue;
+  }
 }
+
 .item {
   padding-top: 10px;
 }

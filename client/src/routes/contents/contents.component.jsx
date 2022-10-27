@@ -20,12 +20,11 @@ export default function Contents() {
         console.log(error);
       });
   }, [bookTitle]);
-  console.log(contents);
 
   const renderContents = contents.map((chapter) => {
     const { id, chapterTitle } = chapter;
     const chapTitle = `Chapter ${id}. \u00A0  ${chapterTitle}`;
-    const chapterLink = `/chapter${id}`;
+    const chapterLink = `chapter${id}`;
     return (
       <div key={id} className="item">
         <Link to={chapterLink}>{chapTitle}</Link>
