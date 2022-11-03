@@ -24,7 +24,8 @@ export default function Contents() {
   const renderContents = contents.map((chapter) => {
     const { id, chapterTitle } = chapter;
     const chapTitle = `Chapter ${id}. \u00A0  ${chapterTitle}`;
-    const chapterLink = `chapter${id}`;
+    const padId = id.toString().padStart(2, "0");
+    const chapterLink = `chapter${padId}`;
     return (
       <div key={id} className="item">
         <Link to={chapterLink}>{chapTitle}</Link>

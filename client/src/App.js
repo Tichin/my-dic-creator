@@ -25,6 +25,7 @@ function App() {
         <Route path=":book_title" element={<Book />}>
           <Route index element={<Contents />}></Route>{" "}
           <Route path=":chapter" element={<Chapter />}>
+            <Route index element={<Read />} />{" "}
             <Route path="edit" element={<Edit />}>
               <Route index element={<Text />} />
               <Route path="basket" element={<Basket />}>
@@ -33,7 +34,6 @@ function App() {
               </Route>
             </Route>
             <Route path="slides" element={<Slides />} />{" "}
-            <Route path="read" element={<Read />} />{" "}
             <Route path="flashcards" element={<FlashCards />} />{" "}
           </Route>
         </Route>

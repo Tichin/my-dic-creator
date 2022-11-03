@@ -1,0 +1,37 @@
+.bg-salmon {
+  background-color: salmon;
+  color: white;
+}
+.bg-black {
+  background-color: black;
+  color: white;
+}
+.tooltip {
+  position: relative;
+}
+.tooltip:hover {
+  background-color: salmon;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+
+  max-width: 600px;
+  min-width: 300px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: -40px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+#paragraph-mark {
+  color: grey;
+}

@@ -19,6 +19,63 @@ router.get("/", (req, res) => {
   res.send(contents);
 });
 
+// @route    GET api/AnneOfGreenGables/:chapter
+// @desc     get chapters(title string)
+// @access   Private
+router.get("/:chapter", (req, res) => {
+  const { chapter } = req.params;
+
+  //get a chapter object from chapterObjectList
+  const chapterObject = chapterObjectList.find(
+    (chapterObject) => chapterObject["chapter"] === chapter
+  );
+  const subtitle = chapterObject["subtitle"];
+
+  const getParagraphIdList = () => {
+    // get ['paragraph01', 'paragraph02'...]
+    return Object.keys(chapterObject).filter(
+      (key) =>
+        key !== "bookTitle" &&
+        key !== "chapter" &&
+        key !== "chapterBEAUTY" &&
+        key !== "subtitle"
+    );
+  };
+
+  /////////// from sentences/AnneOfGreenGables-chapter01.json ////
+  // data structure: {'paragraph01':{'1':{textDics of the first sentence},'2':{},...},
+  // 'paragraph02':{'1':{},'2':{}} }
+
+  // Get [{textDic},{textDic}...]
+  const paragraphTextDicList = () => {
+    return getParagraphIdList()
+      .map(
+        (paragraphId) => chapterObject[paragraphId]
+        // [{'1':{},'2':{}.....},{paragraph2}]
+        // [{paragraph1},{paragraph2}]
+      )
+      .map((sentenceGroupObject) => {
+        //{'1':{},'2':{}.....}
+        return Object.values(sentenceGroupObject); // [{sentence1},{sentence2},{sentence3}...]
+        // [[{sentence1},{sentence2},{sentence3}...],[{sentence1},{sentence2},{sentence3}...]...]
+      })
+      .flat();
+  };
+
+  //////////////////////////////////////////////////
+  // use chapters/AnneOfGreenGables-chapter01.json ...
+  // const paragraphTextDicList = getParagraphId().map(
+  //   (paragraphId) => chapterObject[paragraphId]['textDic']
+  // );
+  // sentenceGroupObjectList
+  // [{'1':{},'2':{}.....},{}]
+  // [{paragraph1},{paragraph2}]
+  res.send({
+    subtitle: subtitle,
+    paragraphTextDicList: paragraphTextDicList(),
+  });
+});
+
 // @route    GET api/AnneOfGreenGables/:chapter/edit
 // @desc     get
 // @access   Private
