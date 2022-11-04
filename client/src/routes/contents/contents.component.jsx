@@ -21,6 +21,10 @@ export default function Contents() {
       });
   }, [bookTitle]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const renderContents = contents.map((chapter) => {
     const { id, chapterTitle } = chapter;
     const chapTitle = `Chapter ${id}. \u00A0  ${chapterTitle}`;
@@ -33,5 +37,9 @@ export default function Contents() {
     );
   });
 
-  return <div className="list">{renderContents}</div>;
+  return (
+    <div className="list" id="contentsTop">
+      {renderContents}
+    </div>
+  );
 }

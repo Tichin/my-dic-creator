@@ -1,18 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import './index.scss';
-import App from './App';
-import { CartProvider } from './contexts/cart.context';
-import { WordProvider } from './contexts/word.context';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./index.scss";
+import App from "./App";
+import { CartProvider } from "./contexts/cart.context";
+import { WordProvider } from "./contexts/word.context";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import ScrollToTop from "./ScrollToTop";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <CartProvider>
         <WordProvider>
+          <ScrollToTop />
           <App />
         </WordProvider>
       </CartProvider>

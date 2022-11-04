@@ -23,7 +23,7 @@ export default function Home() {
   // },
 
   return (
-    <div className="home-container">
+    <div className="home-container" id="home">
       <nav className="nav-container">
         <Link to="/" className="logo-container">
           <LemonIcon className="lemon-icon" />

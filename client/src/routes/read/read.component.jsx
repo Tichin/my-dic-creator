@@ -42,14 +42,19 @@ export default function Chapter() {
   return (
     <div className="chapter-container">
       <div className="subtitle_border subtitle">
-        <span>{chapter.toUpperCase()} </span>-
-        <span>{chapterData?.subtitle}</span>
+        <Link to="#">
+          <span>{chapter.toUpperCase()} </span>-
+          <span>{chapterData?.subtitle}</span>
+        </Link>
       </div>
+
       <div className="text-container">
         <div className="indent lineHeight"> {renderParagraphs}</div>
         <div className="endChapter">
           <h3>END OF {chapter.toUpperCase()}</h3>
         </div>
+        <a href="#top">Go To Top</a>
+        <Link to={`/${book_title}`}>Go to Contents</Link>
       </div>
     </div>
   );
