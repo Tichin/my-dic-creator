@@ -2,15 +2,15 @@ const express = require("express");
 const fs = require("fs");
 const router = express.Router();
 
-// the complete book chapters
-// const chapterObjectList = fs
-//   .readdirSync('/Users/didiwu/Desktop/bookDic/data/AnneOfGreenGables/sentences')
-//   .map((filename) =>
-//     require(`../../data/AnneOfGreenGables/sentences/${filename}`)
-//   );
+// Get all the chapters from Anne of Green Gables
+const chapterObjectList = fs
+  .readdirSync(
+    "/Users/didiwu/Desktop/my-dic-creator/data/AnneOfGreenGables/chapters"
+  )
+  .map((filename) =>
+    require(`../../data/AnneOfGreenGables/chapters/${filename}`)
+  );
 const contents = require("../../data/AnneOfGreenGables/contents");
-const chapterObject = require("../../data/AnneOfGreenGables/AnneOfGreenGables-chapter01.json");
-const chapterObjectList = [chapterObject];
 
 // @route    GET api/AnneOfGreenGables/
 // @desc     get id, chapterTitle, chapterNumber, romanNumerals,
