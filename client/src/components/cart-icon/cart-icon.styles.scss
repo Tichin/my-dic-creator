@@ -6,9 +6,11 @@
   position: sticky;
   bottom: 10px;
   left: 95%;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: flex-start;
   cursor: pointer;
 
   .shopping-icon {
@@ -19,6 +21,7 @@
   .item-count {
     position: absolute;
     font-size: 32px;
-    bottom: 20px;
+    left: 30px;
+    bottom: 45px;
   }
 }

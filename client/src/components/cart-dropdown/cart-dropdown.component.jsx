@@ -1,16 +1,16 @@
-import { useContext, useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { CartContext } from '../../contexts/cart.context';
+import { useContext, useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { CartContext } from "../../contexts/cart.context";
 
-import './cart-dropdown.styles.scss';
+import "./cart-dropdown.styles.scss";
 
 const CartDropdown = () => {
   const { book_title } = useParams();
   const { cartItems } = useContext(CartContext);
   const navigate = useNavigate();
   const [vocCount, setVocCount] = useState(0);
-  const UNDERSCORE = '_';
-  const NOSPACE = '';
+  const UNDERSCORE = "_";
+  const NOSPACE = "";
   const bookTitleFromParam = book_title.split(UNDERSCORE).join(NOSPACE);
 
   useEffect(() => {
@@ -24,29 +24,56 @@ const CartDropdown = () => {
   }, [vocCount]);
 
   const goToBasketHandler = () => {
-    navigate('basket');
+    navigate("basket");
   };
 
-  const renderCartItems = Object.values(cartItems).map((textDic) => {
+  const renderCartItems = Object.values(cartItems).map((textDic, index) => {
     const { text, paragraph, sentence, id, bookTitle } = textDic;
     const lastIndex = paragraph.length - 1;
     const lastTwoIndex = paragraph.length - 2;
     const lastChar = paragraph[lastIndex];
     const lastTwoChar = paragraph[lastTwoIndex];
-    const p = lastTwoChar === '0' ? lastChar : lastTwoChar + lastChar;
+    const p = lastTwoChar === "0" ? lastChar : lastTwoChar + lastChar;
     const marker = `p${p}-s${sentence}`;
     return bookTitle === bookTitleFromParam ? (
-      <li className='basket-list' key={id}>
-        {text}--{marker}
+      <li className="basket-list" key={id}>
+        <span style={{ paddingRight: "10px", fontWeight: "bold" }}>
+          {index + 1}
+        </span>
+        <span>
+          {text}--{marker}
+        </span>
+        <button
+          style={{
+            marginLeft: "10px",
+            paddingLeft: "10px",
+            borderRadius: "5px",
+            border: "none",
+            backgroundColor: "beige",
+            cursor: "pointer",
+          }}
+        >
+          remove
+        </button>
       </li>
     ) : null;
   });
 
   return (
-    <div className='cart-dropdown-container'>
-      <ul className='cart-items'>{renderCartItems}</ul>
-      <h3>{vocCount}</h3>
-      <button onClick={goToBasketHandler}>Go To Baskit</button>
+    <div className="cart-dropdown-container">
+      <ul className="cart-items">{renderCartItems}</ul>
+      <button
+        onClick={goToBasketHandler}
+        style={{
+          height: "3vh",
+          paddingLeft: "10px",
+          border: "none",
+          backgroundColor: "bisque",
+          cursor: "pointer",
+        }}
+      >
+        Go To Baskit
+      </button>
     </div>
   );
 };

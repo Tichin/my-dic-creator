@@ -1,8 +1,13 @@
+.page-container {
+  display: flex;
+}
+
 .chapter-container {
   width: 83%;
-  margin: 0 auto;
+  margin: 30px auto;
   .subtitle-container {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
   }
   .sub {
     font-size: 10px;
@@ -12,6 +17,7 @@
 
 .paragraph-container {
   margin-bottom: 40px;
+  margin-top: 30px;
 }
 
 p {
@@ -35,26 +41,38 @@ p {
 //   position: relative;
 // }
 
-// .tooltip .tooltiptext {
-//   visibility: hidden;
-//   max-width: 400px;
-//   width: max-content;
+.tooltip .tooltiptextEdit {
+  visibility: hidden;
+  max-width: 400px;
+  width: max-content;
 
-//   background-color: black;
-//   color: #fff;
-//   border-radius: 6px;
-//   padding-left: 20px;
-//   padding-right: 20px;
-//   font-size: small;
-//   text-indent: 0ex;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: small;
+  text-indent: 0ex;
 
-//   /* Position the tooltip */
-//   position: absolute;
-//   z-index: 1;
-//   bottom: 25px;
-//   left: -40px;
-// }
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 25px;
+  left: -40px;
+}
 
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptextEdit {
   visibility: visible;
+}
+
+.tooltiptextEdit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editButton {
+  border-radius: 5px;
+  margin-right: 5px;
 }

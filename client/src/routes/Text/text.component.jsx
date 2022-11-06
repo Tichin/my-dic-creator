@@ -1,21 +1,20 @@
-import React, { useEffect, useState, useContext, Fragment } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import axios from 'axios';
-import { CartContext } from '../../contexts/cart.context';
-import CartIcon from '../../components/cart-icon/cart-icon.component';
-import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
-import './text.styles.scss';
+import React, { useEffect, useState, useContext, Fragment } from "react";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import { CartContext } from "../../contexts/cart.context";
+import CartIcon from "../../components/cart-icon/cart-icon.component";
+import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+import "./text.styles.scss";
 
 export default function Text() {
   const { book_title, chapter } = useParams();
   const { addItemToCart, cartItems, isCartOpen, cartCount } =
     useContext(CartContext);
   const [paragraphObjectList, setParagraphObjectList] = useState([]);
-  const [subtitle, setSubtitle] = useState('');
-  const PATHTOSLIDES = `/${book_title}/${chapter}/slides`;
-  const PATHTOFLASHCARD = `/${book_title}/${chapter}/flashcards`;
-  const UNDERSCORE = '_';
-  const NOSPACE = '';
+  // const PATHTOSLIDES = `/${book_title}/${chapter}/slides`;
+  // const PATHTOFLASHCARD = `/${book_title}/${chapter}/flashcards`;
+  const UNDERSCORE = "_";
+  const NOSPACE = "";
   const bookTitle = book_title.split(UNDERSCORE).join(NOSPACE);
   const Zero = cartCount === 0 ? true : false;
   // function to chapter++
@@ -27,7 +26,6 @@ export default function Text() {
       .then((response) => {
         const { subtitle, paragraphObjectList } = response.data;
         setParagraphObjectList(paragraphObjectList);
-        setSubtitle(subtitle);
       })
       .catch((error) => {
         console.log(error);
@@ -36,16 +34,16 @@ export default function Text() {
 
   useEffect(() => {}, [Zero]);
 
-  // paragraphObjectList: [{'p1-s1':{sentenceDic},'p1-s2':{sentenceDic}...},{'p2-s1':{sentence},'p2-s2':{sentenceDic}...}]
-  // paragraphObject: {'p1-s1':{sentenceDic},'p1-s2':{sentenceDic}...}
+  // paragraphObjectList: [{'1':{sentenceDic},'2':{sentenceDic}...},{'1':{sentence},'2':{sentenceDic}...}]
+  // paragraphObject: {'1':{sentenceDic},'2':{sentenceDic}...}
 
   const renderParagraph = paragraphObjectList.map((paragraphObject, index) => {
     const pIndex = index + 1;
     const paragraphMarker = `paragraph-${pIndex}`;
     return (
-      <div className='paragraph-container' key={index}>
-        <span className='sub'>{paragraphMarker}</span>
-        <p className='indent'>
+      <div className="paragraph-container" key={index}>
+        <span className="sub">{paragraphMarker}</span>
+        <p className="indent">
           <Paragraph
             paragraphObject={paragraphObject}
             pIndex={pIndex}
@@ -58,24 +56,20 @@ export default function Text() {
   });
 
   return (
-    <div className='page-container'>
-      <Link to={PATHTOSLIDES}>Show Slides</Link>
-      <Link to={PATHTOFLASHCARD}>Show Flashcards</Link>
-      <div className='chapter-container'>
-        <div className='subtitle-container'>{subtitle}</div>
+    <div className="page-container">
+      <div className="chapter-container">
+        <div className="GoToButton subtitle-container">
+          <Link to={`/${book_title}/${chapter}`}>Go to Read</Link>
+        </div>
         <div>{renderParagraph}</div>
       </div>
-      <Link to='/'>Previous Chapter</Link>
-      <Link to='/'>Next Chapter</Link>
-      <a>update pages</a>
-      <CartIcon />
-      {isCartOpen && <CartDropdown />}
+      <CartIcon /> {isCartOpen && <CartDropdown />}
     </div>
   );
 }
 
 const Paragraph = (props) => {
-  // paragraphObject: {'p1-s1':{sentenceDic},'p1-s2':{sentenceDic}...}
+  // paragraphObject: {'1':{sentenceDic},'2':{sentenceDic}...}
   const { paragraphObject, pIndex, addItemToCart, cartItems } = props;
   const [hover, setHover] = useState(false);
 
@@ -102,14 +96,14 @@ const Paragraph = (props) => {
       const { id } = textDic;
       let { definition } = textDic;
 
-      let className = '';
+      let className = "";
 
       if (cartItems[id]) {
-        className += ' bg-lightpink';
+        className += " bg-lightpink";
       }
 
       if (definition) {
-        className += ' bg-lightblue';
+        className += " bg-lightblue";
       }
 
       return (
@@ -120,11 +114,20 @@ const Paragraph = (props) => {
             onMouseOver={() => onWordMouseOver()}
           >
             {textDic.text}
-            {hover && definition && (
-              <span className='tooltiptext'>{definition}</span>
+            {hover && (
+              <span className="tooltiptextEdit tooltiptextEdit-container">
+                <span className="definition">
+                  {" "}
+                  {definition ? definition : "No Definition Yet"}
+                </span>
+                <span>
+                  <button className="editButton">add to cart</button>
+                  <button className="editButton">edit</button>
+                </span>
+              </span>
             )}
           </span>
-          {textDic.end && <sub className='sub'>{sentenceMarker} </sub>}
+          {textDic.end && <sub className="sub">{sentenceMarker} </sub>}
         </Fragment>
       );
     });

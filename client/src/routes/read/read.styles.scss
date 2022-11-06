@@ -14,3 +14,14 @@
 .text-container {
   margin-top: 50px;
 }
+.GoToButton {
+  color: black;
+  border-radius: 10px;
+  border: 1px solid gray;
+  display: inline-block;
+}
+.GoToButton:visited {
+  color: rgb(38, 38, 62);
+  border-radius: 10px;
+  border: 1px solid gray;
+}

@@ -147,8 +147,8 @@ const getParagraphObjectListAndSubtitle = (chapter, chapterObjectList) => {
     );
   })();
 
-  // paragraphObjectList: [{'p1-s1':{sentenceDic},'p1-s2':{sentenceDic}...},{'p2-s1':{sentence},'p2-s2':{sentenceDic}...}]
-
+  // paragraphObjectList: [{'1':{sentenceDic},'2':{sentenceDic}...},{'1':{sentenceDic},'2':{sentenceDic}...}]
+  // paragraphObjectList: [{'1':{},'2':{}.....},{paragraph2}] 2022/11/5
   const paragraphObjectList = paragraphIdList.map(
     (paragraphId) => chapterObject[paragraphId]
   );

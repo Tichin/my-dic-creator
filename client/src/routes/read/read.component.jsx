@@ -41,13 +41,9 @@ export default function Chapter() {
   );
   return (
     <div className="chapter-container">
-      <div className="subtitle_border subtitle">
-        <Link to="#">
-          <span>{chapter.toUpperCase()} </span>-
-          <span>{chapterData?.subtitle}</span>
-        </Link>
-      </div>
-
+      <Link to="edit" className="GoToButton">
+        Go and Edit the Dictionary
+      </Link>
       <div className="text-container">
         <div className="indent lineHeight"> {renderParagraphs}</div>
         <div className="endChapter">
