@@ -7,6 +7,7 @@ export default function Chapter() {
   const { chapter, book_title } = useParams();
   const bookTitle = book_title.split("_").join("");
   const [subtitle, setSubtitle] = useState("");
+
   useEffect(() => {
     axios
       .get(`http://localhost:5001/api/${bookTitle}/${chapter}`)
@@ -24,7 +25,7 @@ export default function Chapter() {
   return (
     <div className="chapter-container">
       <div className="subtitle_border subtitle">
-        <Link to="#">
+        <Link to={`/${book_title}/${chapter}`}>
           <span>{chapter.toUpperCase()} </span>-<span>{subtitle}</span>
         </Link>
       </div>
