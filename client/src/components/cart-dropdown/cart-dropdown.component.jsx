@@ -6,7 +6,8 @@ import "./cart-dropdown.styles.scss";
 
 const CartDropdown = () => {
   const { book_title } = useParams();
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, removeItemFromCart, setIsCartOpen, clearItemFromCart } =
+    useContext(CartContext);
   const navigate = useNavigate();
   const [vocCount, setVocCount] = useState(0);
   const UNDERSCORE = "_";
@@ -26,6 +27,15 @@ const CartDropdown = () => {
   const goToBasketHandler = () => {
     navigate("basket");
   };
+  const removeItem = (item) => {
+    removeItemFromCart(item);
+  };
+  const closeCart = () => {
+    setIsCartOpen(false);
+  };
+  const clearCart = () => {
+    clearItemFromCart();
+  };
 
   const renderCartItems = Object.values(cartItems).map((textDic, index) => {
     const { text, paragraph, sentence, id, bookTitle } = textDic;
@@ -44,6 +54,7 @@ const CartDropdown = () => {
           {text}--{marker}
         </span>
         <button
+          onClick={() => removeItem(textDic)}
           style={{
             marginLeft: "10px",
             paddingLeft: "10px",
@@ -62,6 +73,30 @@ const CartDropdown = () => {
   return (
     <div className="cart-dropdown-container">
       <ul className="cart-items">{renderCartItems}</ul>
+      <button
+        onClick={clearCart}
+        style={{
+          height: "3vh",
+          paddingLeft: "10px",
+          border: "none",
+          backgroundColor: "red",
+          cursor: "pointer",
+        }}
+      >
+        Clear the Cart
+      </button>
+      <button
+        onClick={closeCart}
+        style={{
+          height: "3vh",
+          paddingLeft: "10px",
+          border: "none",
+          backgroundColor: "gray",
+          cursor: "pointer",
+        }}
+      >
+        Close the Cart
+      </button>
       <button
         onClick={goToBasketHandler}
         style={{
