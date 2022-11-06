@@ -22,7 +22,18 @@ const CartIcon = () => {
         <ShoppingIcon className="shopping-icon" onClick={toggleIsCartOpen} />
         <span className="item-count">{cartCount}</span>
       </Fragment>
-      <button onClick={onClearClick}>clear the cart</button>
+      <button
+        style={{
+          height: "4vh",
+          border: "1px solid black",
+          borderRadius: "10px",
+          backgroundColor: "white",
+          cursor: "pointer",
+        }}
+        onClick={onClearClick}
+      >
+        clear the cart
+      </button>
     </div>
   );
 };
