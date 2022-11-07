@@ -24,8 +24,7 @@ export default function Text() {
     axios
       .get(`http://localhost:5001/api/${bookTitle}/${chapter}/edit`)
       .then((response) => {
-        const { subtitle, paragraphObjectList } = response.data;
-        setParagraphObjectList(paragraphObjectList);
+        setParagraphObjectList(response.data.paragraphObjectList);
       })
       .catch((error) => {
         console.log(error);

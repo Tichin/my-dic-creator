@@ -79,7 +79,7 @@ const CartDropdown = () => {
           height: "3vh",
           paddingLeft: "10px",
           border: "none",
-          backgroundColor: "red",
+          backgroundColor: "gray",
           cursor: "pointer",
         }}
       >
@@ -91,7 +91,7 @@ const CartDropdown = () => {
           height: "3vh",
           paddingLeft: "10px",
           border: "none",
-          backgroundColor: "gray",
+          backgroundColor: "beige",
           cursor: "pointer",
         }}
       >
@@ -103,7 +103,7 @@ const CartDropdown = () => {
           height: "3vh",
           paddingLeft: "10px",
           border: "none",
-          backgroundColor: "bisque",
+          backgroundColor: "aquamarine",
           cursor: "pointer",
         }}
       >

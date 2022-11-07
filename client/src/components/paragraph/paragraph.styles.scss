@@ -10,17 +10,19 @@
   position: relative;
 }
 .tooltip:hover {
-  background-color: salmon;
+  background-color: gray;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-
-  max-width: 600px;
+  width: 100%;
+  max-width: 800px;
   min-width: 300px;
-  height: 40px;
+
   display: inline-block;
   border-radius: 10px;
+  text-align: center;
+  line-height: 30px;
 
   /* Position the tooltip */
   position: absolute;
@@ -34,4 +36,8 @@
 }
 #paragraph-mark {
   color: grey;
+}
+
+.underline {
+  text-decoration: underline;
 }

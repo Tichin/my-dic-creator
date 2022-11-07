@@ -60,9 +60,9 @@ export default function Paragraph({ textDics, paragraphNumber }) {
     //   definition = boxItems[id]["definition"];
     //   className += "";
     // }
-    // if (definition) {
-    //   className += `${HOVER_COLOR_CLASS[color]}`;
-    // }
+    if (definition) {
+      className += "underline";
+    }
 
     return (
       <Fragment key={id}>
@@ -78,7 +78,7 @@ export default function Paragraph({ textDics, paragraphNumber }) {
           )} */}
 
           {hover && definition && (
-            <div className="tooltiptext bg-salmon">{definition}</div>
+            <div className="tooltiptext bg-black">{definition}</div>
           )}
         </span>
       </Fragment>
