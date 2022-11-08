@@ -1,0 +1,11 @@
+.card-container {
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  .saveToDic {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+  }
+}

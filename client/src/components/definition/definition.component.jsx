@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { WordContext } from '../../contexts/word.context';
-import './definition.styles.scss';
+import React, { useContext } from "react";
+import { WordContext } from "../../contexts/word.context";
+import "./definition.styles.scss";
 
 const Definition = ({ partOfSpeech, definition, example }) => {
   const { currentWord, setCurrentWord } = useContext(WordContext);
@@ -22,17 +22,15 @@ const Definition = ({ partOfSpeech, definition, example }) => {
   // text: "latter" }
 
   return (
-    <div className='cards-container'>
-      <div className='card-container'>
-        <h5>
-          ({partOfSpeech}) {definition}
-        </h5>
-        <p>{example}</p>
+    <div className="card-container">
+      <h5>
+        ({partOfSpeech}) {definition}
+      </h5>
+      <p>{example}</p>
 
-        <button className='saveToDic' onClick={onPassToFormClick}>
-          Pass To Form
-        </button>
-      </div>
+      <button className="saveToDic" onClick={onPassToFormClick}>
+        Pass To Form
+      </button>
     </div>
   );
 };
