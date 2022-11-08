@@ -60,13 +60,32 @@ export default function Text() {
         <div className="GoToButton subtitle-container">
           <Link to={`/${book_title}/${chapter}`}>Go to Read</Link>
         </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            width: "6vw",
+            textAlign: "center",
+            marginTop: "2vh",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "lightblue",
+              marginBottom: "1vh",
+            }}
+          >
+            Had definition
+          </div>
+          <div style={{ backgroundColor: "pink" }}>In the baskit</div>
+        </div>
         <div>{renderParagraph}</div>
       </div>
       <CartIcon /> {isCartOpen && <CartDropdown />}
     </div>
   );
 }
-
+//*************************Paragraph component****************************/
 const Paragraph = (props) => {
   // paragraphObject: {'1':{sentenceDic},'2':{sentenceDic}...}
   const { paragraphObject, pIndex, addItemToCart, cartItems } = props;
@@ -121,7 +140,12 @@ const Paragraph = (props) => {
                 </span>
                 <span>
                   <button className="editButton">add to cart</button>
-                  <button className="editButton">edit</button>
+                  <button
+                    className="editButton"
+                    onClick={() => onTextClick(textDic)}
+                  >
+                    edit
+                  </button>
                 </span>
               </span>
             )}
