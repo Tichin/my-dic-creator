@@ -5,6 +5,7 @@ import "./cart-item.styles.scss";
 
 const CartItem = ({ cartItem }) => {
   const { text, id, definition } = cartItem;
+
   const PATHTOWORD = `${id}`;
   const { removeItemFromCart } = useContext(CartContext);
   const onRemoveClick = () => {
@@ -17,9 +18,11 @@ const CartItem = ({ cartItem }) => {
       </div>
       <div className="item-details">
         <span className="name">{text}</span>
-        <span className="price">{definition || "definition"}</span>
+        <span>{definition || "definition"}</span>
       </div>
-      <button onClick={onRemoveClick}>Remove from Basket</button>
+      <button onClick={onRemoveClick} style={{ borderRadius: "10px" }}>
+        Remove from Basket
+      </button>
     </div>
   );
 };

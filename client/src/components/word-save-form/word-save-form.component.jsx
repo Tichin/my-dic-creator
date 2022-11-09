@@ -158,6 +158,7 @@ export default function WordSaveForm() {
           </li>
         </ul>
       </form>
+      <button onClick={resetFormFields}>Reset</button>
     </div>
   );
 }

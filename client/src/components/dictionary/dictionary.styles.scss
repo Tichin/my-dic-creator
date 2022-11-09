@@ -1,4 +1,5 @@
 .definitions-container {
+  width: 50vw;
   .sentenceFromBook {
     padding-left: 30px;
     padding-right: 20px;
@@ -8,9 +9,7 @@
 
 ul {
   list-style: none;
-  li {
-    border: 1px solid pink;
-  }
+  width: 400px;
 }
 
 .textDicText {

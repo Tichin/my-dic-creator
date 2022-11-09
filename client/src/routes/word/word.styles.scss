@@ -1,13 +1,23 @@
 .word-container {
   display: flex;
-  border: 1px solid red;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .word-detail-container {
   display: flex;
   border: 1px solid green;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1vh;
+
   .dictionary-container {
-    width: 50%;
-    border: 1px solid yellow;
+    width: 25vw;
+    margin: 0 auto;
+  }
+  .word-form-container {
+    width: 35vw;
+    // margin: 0 auto;
   }
 }

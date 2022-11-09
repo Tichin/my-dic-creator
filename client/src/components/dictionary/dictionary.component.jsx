@@ -1,32 +1,9 @@
-import React, { useEffect, useState, useContext } from 'react';
-import axios from 'axios';
-import Definition from '../definition/definition.component';
-import { WordContext } from '../../contexts/word.context';
-import './dictionary.styles.scss';
+import React from "react";
+import Definition from "../definition/definition.component";
+import "./dictionary.styles.scss";
 
-export default function Dictionary() {
-  const { currentWord } = useContext(WordContext);
-  const [meanings, setMeanings] = useState([]);
-  let text = currentWord.text || '';
-
-  useEffect(() => {
-    const getDefinition = async () => {
-      const response = await axios.get(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${text}`
-      );
-
-      if (response) {
-        setMeanings([...response.data[0].meanings]);
-        // meanings:[{…}, {…}]
-      } else {
-        console.alert('Word definition not in the dictionary');
-      }
-    };
-
-    getDefinition();
-  }, [text]);
-
-  let renderDefinitions = 'loading...';
+export default function Dictionary({ meanings }) {
+  let renderDefinitions = "loading...";
 
   if (meanings) {
     renderDefinitions = meanings.map((meaning) => {
@@ -43,7 +20,7 @@ export default function Dictionary() {
     });
   }
   return (
-    <div className='definitions-container'>
+    <div className="definitions-container">
       <ul>{renderDefinitions}</ul>
     </div>
   );
