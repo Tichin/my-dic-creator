@@ -1,5 +1,7 @@
 .definitions-container {
   width: 50vw;
+  height: 50vh;
+  overflow-y: scroll;
   .sentenceFromBook {
     padding-left: 30px;
     padding-right: 20px;
