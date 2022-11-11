@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import axios from "axios";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { CartContext } from "../../contexts/cart.context";
 import CartItem from "../../components/cart-item/cart-item.component";
-import { addCollectionAndDocuments } from "../../utils/firebase/firebase.utils";
+// import { addCollectionAndDocuments } from "../../utils/firebase/firebase.utils";
 import "./words.styles.scss";
 
 export default function Words() {
@@ -15,7 +15,6 @@ export default function Words() {
   const UNDERSCORE = "_";
   const NOSPACE = "";
   const bookTitle = book_title.split(UNDERSCORE).join(NOSPACE);
-  const navigate = useNavigate();
 
   const onSaveClick = () => {
     axios
@@ -29,11 +28,10 @@ export default function Words() {
       .catch((error) => {
         console.log(error);
       });
-    addCollectionAndDocuments(Object.values(cartItems));
+    // addCollectionAndDocuments(Object.values(cartItems));
     alert("save to dictionary successfully");
     clearItemFromCart();
     setIsCartOpen(false);
-    navigate(PATHTOEDIT);
   };
   const renderWords = Object.values(cartItems).map((textDic) => {
     return textDic.bookTitle === bookTitle ? (
