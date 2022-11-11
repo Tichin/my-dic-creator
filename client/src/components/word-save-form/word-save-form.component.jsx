@@ -158,7 +158,17 @@ export default function WordSaveForm() {
           </li>
         </ul>
       </form>
-      <button onClick={resetFormFields}>Reset</button>
+      <button
+        onClick={resetFormFields}
+        style={{
+          backgroundColor: "white",
+          color: "black",
+          border: "1px solid gray",
+          borderRadius: "30px",
+        }}
+      >
+        Reset
+      </button>
     </div>
   );
 }
