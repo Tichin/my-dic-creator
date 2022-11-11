@@ -165,25 +165,28 @@ router.post("/:chapter", (req, res) => {
   const chapter = req.body.chapter;
   // cartItems/textDics { id:{textDic}, id:{textDic}...}
 
-  console.log(req.body.textDics);
+  // console.log(req.body.textDics);
 
   const chapterObject = chapterObjectList.find(
     (chapterObject) => chapterObject["chapter"] === chapter
   );
+  // console.log(chapterObject);
+  // console.log(textDicObject);
+  // console.log(chapter);
   Object.values(textDicObject).forEach((textDic) => {
     const { paragraph, sentence, id } = textDic;
-    const pNumber = Number(paragraph.slice(-2));
-    const sentenceMarker = `p${pNumber}-s${sentence}`;
-    const oldTextDic = chapterObject[paragraph][sentenceMarker][id];
-    chapterObject[paragraph][sentenceMarker][id] = {
+    const oldTextDic = chapterObject[paragraph][sentence][id];
+    //  console.log(oldTextDic);
+    chapterObject[paragraph][sentence][id] = {
       ...oldTextDic,
       ...textDic,
     };
+
+    console.log(chapterObject[paragraph][sentence][id]);
   });
 
-  //`/Users/didiwu/Desktop/my-dic-creator/data/AnneOfGreenGables/AnneOfGreenGables-${chapter}.json`
   fs.writeFile(
-    `/Users/didiwu/Desktop/my-dic-creator/data/AnneOfGreenGables/AnneOfGreenGables.json`,
+    `/Users/didiwu/Desktop/my-dic-creator/data/AnneOfGreenGables/chapters/AnneOfGreenGables-${chapter}.json`,
     JSON.stringify(chapterObject),
     (err) => {
       if (err) {
